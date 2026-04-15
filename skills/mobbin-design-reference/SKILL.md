@@ -27,24 +27,27 @@ Figure out what the user is looking for. Extract:
 
 Call `mcp__mobbin__search_screens` with the query, platform, and limit. The `mode` defaults to `deep` (AI-powered relevance scoring) — use this unless the user needs fast results.
 
-### 3. Download images locally
+### 3. Download all images in a single command
 
-This is the critical step. For each screen returned:
+Speed matters — every separate tool call adds seconds of overhead. Download ALL images in **one Bash call** using background processes:
 
-1. Create a `mobbin-screens/` directory at the project root if it doesn't exist
-2. Download each image using `curl` or `wget`:
-   ```
-   mobbin-screens/<AppName>-<first8chars-of-id>.webp
-   ```
-   Example: `mobbin-screens/N26-d2d13c6f.webp`
+```bash
+mkdir -p mobbin-screens && \
+curl -sL -o "mobbin-screens/AppA-abcd1234.webp" "URL1" & \
+curl -sL -o "mobbin-screens/AppB-efgh5678.webp" "URL2" & \
+curl -sL -o "mobbin-screens/AppC-ijkl9012.webp" "URL3" & \
+wait
+```
 
-Use parallel downloads to save time (e.g., background curl commands or xargs).
+Filename format: `<AppName>-<first8chars-of-id>.webp`
 
-If a download fails, retry once. If it still fails, skip that image and continue with the rest — note which images couldn't be downloaded so the user knows. Don't let one failed download block the entire workflow.
+If any downloads fail (check with `ls -la mobbin-screens/` at the end), note which ones and move on.
 
-### 4. Read every image
+### 4. Read all images in one turn
 
-Use the `Read` tool on **each downloaded image file**. Do not skip this step. Do not summarize without reading. The whole point is to visually inspect the actual screenshots.
+Issue **all Read tool calls in a single response** — Claude Code executes parallel Read calls within the same turn, so this takes the same time as reading one image. Do not read them one at a time in separate turns.
+
+Do not skip this step. Do not summarize without reading. The whole point is to visually inspect the actual screenshots.
 
 ### 5. Present findings and respond
 
