@@ -35,25 +35,22 @@ Search Mobbin for real app screenshots, download them locally, and visually anal
 
 ## Installation
 
-### Claude Code
+```bash
+npx skills add mobbin/mobbin-skills
+```
+
+Skills are automatically available once installed. The agent will use them when relevant tasks are detected.
+
+<details>
+<summary>Manual installation</summary>
 
 ```bash
-# Clone the repo
 git clone https://github.com/mobbin/mobbin-skills.git
-
-# Copy skills to your Claude skills directory
 cp -r mobbin-skills/skills/* ~/.claude/skills/
 ```
 
-Or install a single skill:
-
-```bash
-cp -r mobbin-skills/skills/mobbin-design-reference ~/.claude/skills/
-```
-
-### Claude.ai
-
-Add the contents of a skill's `SKILL.md` to your project knowledge.
+On Claude.ai, add the contents of a skill's `SKILL.md` to your project knowledge.
+</details>
 
 ## Contributing
 
