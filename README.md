@@ -4,7 +4,16 @@ Agent skills for [Mobbin](https://mobbin.com) — the world's largest library of
 
 ## Prerequisites
 
-- [Mobbin MCP Server](https://github.com/mobbin/mobbin-mcp) — provides the `mcp__mobbin__search_screens` tool that skills depend on. Follow the setup instructions in that repo first.
+- **Mobbin MCP Server** — these skills require the Mobbin MCP server (`api.mobbin.com/mcp`) to be configured in your AI coding agent. Add it to your MCP client config:
+  ```json
+  {
+    "mcpServers": {
+      "mobbin": {
+        "url": "https://api.mobbin.com/mcp"
+      }
+    }
+  }
+  ```
 
 ## Available Skills
 
