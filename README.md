@@ -1,4 +1,4 @@
-# Mobbin Skills
+# Skills
 
 Agent skills for [Mobbin](https://mobbin.com) — the world's largest library of real app UI screenshots.
 
