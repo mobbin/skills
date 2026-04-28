@@ -17,9 +17,9 @@ Agent skills for [Mobbin](https://mobbin.com) — the world's largest library of
 
 ## Available Skills
 
-### [mobbin-design-reference](skills/mobbin-design-reference/)
+### [mobbin-search](skills/mobbin-search/)
 
-Search Mobbin for real app screenshots, download them locally, and visually analyze them before answering design questions.
+Search Mobbin for real app screenshots and visually analyze them before answering design questions.
 
 **Use when:**
 - Exploring how top apps handle a specific screen or flow
@@ -28,10 +28,10 @@ Search Mobbin for real app screenshots, download them locally, and visually anal
 - Any design question where real-world examples would help
 
 **What it does:**
-1. Searches Mobbin's library via MCP
-2. Downloads screenshots locally so the agent can actually view them
-3. Visually inspects each image (not just metadata)
-4. Provides grounded analysis with Mobbin links for further exploration
+1. Searches Mobbin's library via MCP (images returned inline)
+2. Visually inspects each screenshot
+3. Responds directly or offers to build an HTML evidence board for deeper analysis
+4. Provides grounded observations with Mobbin links for further exploration
 
 ## Installation
 
