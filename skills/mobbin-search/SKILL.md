@@ -3,7 +3,7 @@ name: mobbin-search
 description: Search Mobbin for real app UI screenshots and visually analyze them. Required before calling the `search_screens` MCP tool — this skill defines how to plan searches, respond, and build HTML evidence boards when the screens are the answer. Use whenever the user asks about UI/UX design patterns, wants to see how other apps handle a screen or flow, needs design inspiration or references, asks to compare UI approaches across apps, mentions Mobbin, or whenever `search_screens` would be relevant. Trigger aggressively for any design-related question — even if screenshots aren't explicitly requested.
 ---
 
-# Mobbin Design Reference
+# Mobbin Search
 
 Pull real app screenshots from Mobbin and visually analyze them before answering the user's design question.
 
