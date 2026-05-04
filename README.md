@@ -36,7 +36,7 @@ Search Mobbin for real app screenshots and visually analyze them before answerin
 ## Installation
 
 ```bash
-npx skills add mobbin/mobbin-skills
+npx skills add mobbin/skills
 ```
 
 Skills are automatically available once installed. The agent will use them when relevant tasks are detected.
@@ -45,8 +45,8 @@ Skills are automatically available once installed. The agent will use them when 
 <summary>Manual installation</summary>
 
 ```bash
-git clone https://github.com/mobbin/mobbin-skills.git
-cp -r mobbin-skills/skills/* ~/.claude/skills/
+git clone https://github.com/mobbin/skills.git
+cp -r skills/skills/* ~/.claude/skills/
 ```
 
 On Claude.ai, add the contents of a skill's `SKILL.md` to your project knowledge.
