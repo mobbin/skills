@@ -1,7 +1,7 @@
 {
   "name": "mobbin",
   "version": "1.1.0",
-  "description": "Ground design work in real-world UI from Mobbin: skills plus Mobbin's hosted MCP server for screens, flows, and website sections.",
+  "description": "Mobbin MCP server and skills for finding real-world app screens, flows, and website sections while designing and building UI.",
   "mcpServers": "./mcp.json",
   "author": {
     "name": "Mobbin",
@@ -11,5 +11,5 @@
   "homepage": "https://docs.mobbin.com/mcp/introduction",
   "repository": "https://github.com/mobbin/skills",
   "license": "MIT",
-  "keywords": ["mobbin", "design-research", "ui-design", "ux-design", "mcp"]
+  "keywords": ["mobbin", "design", "mcp", "ui", "ux"]
 }
