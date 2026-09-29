@@ -39,14 +39,16 @@ validateSchema("schemas/1.0.0/plugin.schema.json", plugin, "plugin.json");
 validateSchema("schemas/1.0.0/mcp.schema.json", mcp, "mcp.json");
 
 // Every host manifest describes the same plugin, so the copies must agree.
-const claudePlugin = await readJson(".claude-plugin/plugin.json");
+const hostManifests = [".claude-plugin/plugin.json", ".cursor-plugin/plugin.json", ".grok-plugin/plugin.json"];
 const claudeMarketplace = await readJson(".claude-plugin/marketplace.json");
 const claudeMcp = await readJson(".mcp.json");
 
-if (plugin && claudePlugin) {
+for (const path of hostManifests) {
+  const manifest = await readJson(path);
+  if (!plugin || !manifest) continue;
   for (const field of ["name", "version", "description", "license"]) {
-    if (plugin[field] !== claudePlugin[field]) {
-      fail(`.claude-plugin/plugin.json: ${field} "${claudePlugin[field]}" differs from plugin.json "${plugin[field]}"`);
+    if (plugin[field] !== manifest[field]) {
+      fail(`${path}: ${field} "${manifest[field]}" differs from plugin.json "${plugin[field]}"`);
     }
   }
 }
@@ -76,6 +78,6 @@ if (errors.length > 0) {
 } else {
   console.log("PASS: plugin.json schema");
   console.log("PASS: mcp.json schema");
-  console.log("PASS: Claude manifests match plugin.json and mcp.json");
+  console.log("PASS: host manifests match plugin.json and mcp.json");
   console.log("Validation passed.");
 }

@@ -42,6 +42,10 @@ Where your agent supports plugins, install the plugin. It sets up the skills and
 2. Run **Chat: Install Plugin From Source** from the Command Palette.
 3. Enter `https://github.com/mobbin/skills`.
 
+### Cursor
+
+Install **Mobbin** from the [Cursor Marketplace](https://cursor.com/marketplace).
+
 ### Other agents: skills only
 
 ```bash
