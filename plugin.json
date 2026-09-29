@@ -5,6 +5,7 @@
   "description": "Ground design work in real-world UI from Mobbin: skills plus Mobbin's hosted MCP server for screens, flows, and website sections.",
   "author": {
     "name": "Mobbin",
+    "email": "support@mobbin.com",
     "url": "https://mobbin.com"
   },
   "homepage": "https://docs.mobbin.com/mcp/introduction",

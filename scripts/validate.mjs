@@ -20,7 +20,11 @@ const MCP_CONFIG = "./mcp.json";
 const HOST_MANIFESTS = [".claude-plugin/plugin.json", ".cursor-plugin/plugin.json", ".grok-plugin/plugin.json"];
 
 // Fields that every manifest copy must share with plugin.json.
-const SHARED_FIELDS = ["name", "version", "description", "license"];
+const SHARED_FIELDS = ["name", "version", "description", "author", "homepage", "repository", "license"];
+
+// Fields on the Claude marketplace entry that must match plugin.json. Claude Code shows the
+// entry's values over the manifest's, so this is the copy users see.
+const MARKETPLACE_FIELDS = ["description", "homepage", "repository", "license"];
 
 const CHECKS = [
   {
@@ -36,7 +40,7 @@ const CHECKS = [
     run: hostManifestProblems,
   },
   {
-    title: "Claude marketplace lists the plugin without its own version",
+    title: "Claude marketplace entry matches plugin.json and has no version",
     run: marketplaceProblems,
   },
 ];
@@ -56,9 +60,7 @@ function hostManifestProblems() {
   const plugin = readJson("plugin.json");
   return HOST_MANIFESTS.flatMap((file) => {
     const manifest = readJson(file);
-    const problems = SHARED_FIELDS.filter((field) => manifest[field] !== plugin[field]).map(
-      (field) => `${file}: ${field} is "${manifest[field]}", but plugin.json has "${plugin[field]}"`,
-    );
+    const problems = mismatches(file, manifest, plugin, SHARED_FIELDS);
     if ("mcpServers" in manifest && manifest.mcpServers !== MCP_CONFIG) {
       problems.push(`${file}: mcpServers must be "${MCP_CONFIG}"`);
     }
@@ -68,12 +70,21 @@ function hostManifestProblems() {
 
 function marketplaceProblems() {
   const file = ".claude-plugin/marketplace.json";
-  const { name } = readJson("plugin.json");
-  const entry = readJson(file).plugins?.find((plugin) => plugin.name === name);
-  if (!entry) return [`${file}: no plugin entry named "${name}"`];
+  const plugin = readJson("plugin.json");
+  const entry = readJson(file).plugins?.find((candidate) => candidate.name === plugin.name);
+  if (!entry) return [`${file}: no plugin entry named "${plugin.name}"`];
+  const problems = mismatches(file, entry, plugin, MARKETPLACE_FIELDS);
   // Claude Code reads the version from plugin.json first, so a second copy can only drift.
-  if ("version" in entry) return [`${file}: remove "version" from the "${name}" entry`];
-  return [];
+  if ("version" in entry) problems.push(`${file}: remove "version" from the "${plugin.name}" entry`);
+  return problems;
+}
+
+// Lists the fields whose value in `copy` differs from plugin.json. Objects such as `author`
+// compare by their JSON text, so key order matters.
+function mismatches(file, copy, plugin, fields) {
+  return fields
+    .filter((field) => JSON.stringify(copy[field]) !== JSON.stringify(plugin[field]))
+    .map((field) => `${file}: ${field} is ${JSON.stringify(copy[field])}, but plugin.json has ${JSON.stringify(plugin[field])}`);
 }
 
 function readJson(file) {
