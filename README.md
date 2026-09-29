@@ -73,10 +73,6 @@ On Claude.ai, add the contents of a skill's `SKILL.md` to your project knowledge
 
 The MCP server on its own, for clients without plugin support, is documented in [`mobbin/mobbin-mcp-server`](https://github.com/mobbin/mobbin-mcp-server).
 
-## Contributing
-
-To add a new skill, create a directory under `skills/` with a `SKILL.md` file following the [Agent Skills](https://agentskills.io/) format. See [CONTRIBUTING.md](CONTRIBUTING.md) for what each manifest file does and how to test changes.
-
 ## License
 
 MIT
