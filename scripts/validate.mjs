@@ -41,7 +41,6 @@ validateSchema("schemas/1.0.0/mcp.schema.json", mcp, "mcp.json");
 // Every host manifest describes the same plugin, so the copies must agree.
 const hostManifests = [".claude-plugin/plugin.json", ".cursor-plugin/plugin.json", ".grok-plugin/plugin.json"];
 const claudeMarketplace = await readJson(".claude-plugin/marketplace.json");
-const claudeMcp = await readJson(".mcp.json");
 
 for (const path of hostManifests) {
   const manifest = await readJson(path);
@@ -50,6 +49,10 @@ for (const path of hostManifests) {
     if (plugin[field] !== manifest[field]) {
       fail(`${path}: ${field} "${manifest[field]}" differs from plugin.json "${plugin[field]}"`);
     }
+  }
+  // mcp.json is the only MCP config; a host manifest that names one must point at it.
+  if ("mcpServers" in manifest && manifest.mcpServers !== "./mcp.json") {
+    fail(`${path}: mcpServers must be "./mcp.json"`);
   }
 }
 
@@ -60,14 +63,6 @@ if (plugin && claudeMarketplace) {
   } else if ("version" in entry) {
     // Claude Code reads the version from plugin.json first; a second copy only drifts.
     fail(`.claude-plugin/marketplace.json: remove "version" from the "${plugin.name}" entry`);
-  }
-}
-
-if (mcp && claudeMcp) {
-  const urls = (config) =>
-    Object.fromEntries(Object.entries(config.mcpServers ?? {}).map(([name, server]) => [name, server.url]));
-  if (JSON.stringify(urls(mcp)) !== JSON.stringify(urls(claudeMcp))) {
-    fail(".mcp.json: servers differ from mcp.json");
   }
 }
 

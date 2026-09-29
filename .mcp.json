@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "mobbin": {
-      "type": "http",
-      "url": "https://api.mobbin.com/mcp"
-    }
-  }
-}

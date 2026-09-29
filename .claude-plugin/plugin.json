@@ -2,7 +2,7 @@
   "name": "mobbin",
   "version": "1.1.0",
   "description": "Ground design work in real-world UI from Mobbin: skills plus Mobbin's hosted MCP server for screens, flows, and website sections.",
-  "mcpServers": "./.mcp.json",
+  "mcpServers": "./mcp.json",
   "author": {
     "name": "Mobbin",
     "email": "support@mobbin.com",
