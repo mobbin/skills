@@ -1,0 +1,20 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.json",
+  "name": "mobbin",
+  "description": "Official Mobbin plugins.",
+  "owner": {
+    "name": "Mobbin",
+    "email": "support@mobbin.com",
+    "url": "https://mobbin.com"
+  },
+  "plugins": [
+    {
+      "name": "mobbin",
+      "source": "./",
+      "description": "Mobbin MCP server and skills for finding real-world app screens, flows, and website sections while designing and building UI.",
+      "homepage": "https://docs.mobbin.com/mcp/introduction",
+      "repository": "https://github.com/mobbin/skills",
+      "license": "MIT"
+    }
+  ]
+}

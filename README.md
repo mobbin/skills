@@ -2,18 +2,10 @@
 
 Agent skills for [Mobbin](https://mobbin.com) — the world's largest library of real app UI screenshots.
 
-## Prerequisites
+## What's included
 
-- **Mobbin MCP Server** — these skills require the Mobbin MCP server (`api.mobbin.com/mcp`) to be configured in your AI coding agent. Add it to your MCP client config:
-  ```json
-  {
-    "mcpServers": {
-      "mobbin": {
-        "url": "https://api.mobbin.com/mcp"
-      }
-    }
-  }
-  ```
+- **Skills** in [`skills/`](skills/). They teach the agent when and how to use Mobbin.
+- **The Mobbin MCP server** at `https://api.mobbin.com/mcp`. The plugin installs it for you. On first use your agent opens a browser to sign in to Mobbin. You need a Pro, Team, or Enterprise plan.
 
 ## Available Skills
 
@@ -35,11 +27,42 @@ Search Mobbin for real app screenshots and visually analyze them before answerin
 
 ## Installation
 
+Where your agent supports plugins, install the plugin. It sets up the skills and the MCP server together.
+
+### Claude Code
+
+```
+/plugin marketplace add mobbin/skills
+/plugin install mobbin@mobbin
+```
+
+### VS Code / GitHub Copilot
+
+1. Turn on `chat.plugins.enabled` in VS Code settings.
+2. Run **Chat: Install Plugin From Source** from the Command Palette.
+3. Enter `https://github.com/mobbin/skills`.
+
+### Cursor
+
+Install **Mobbin** from the [Cursor Marketplace](https://cursor.com/marketplace).
+
+### Other agents: skills only
+
 ```bash
 npx skills add mobbin/skills
 ```
 
-Skills are automatically available once installed. The agent will use them when relevant tasks are detected.
+This installs only the skills, so add the MCP server to your agent's MCP config yourself:
+
+```json
+{
+  "mcpServers": {
+    "mobbin": {
+      "url": "https://api.mobbin.com/mcp"
+    }
+  }
+}
+```
 
 <details>
 <summary>Manual installation</summary>
@@ -52,9 +75,7 @@ cp -r skills/skills/* ~/.claude/skills/
 On Claude.ai, add the contents of a skill's `SKILL.md` to your project knowledge.
 </details>
 
-## Contributing
-
-To add a new skill, create a directory under `skills/` with a `SKILL.md` file following the [Agent Skills](https://agentskills.io/) format.
+The MCP server on its own, for clients without plugin support, is documented in [`mobbin/mobbin-mcp-server`](https://github.com/mobbin/mobbin-mcp-server).
 
 ## License
 

@@ -1,0 +1,15 @@
+{
+  "name": "mobbin",
+  "displayName": "Mobbin",
+  "version": "1.1.0",
+  "description": "Mobbin MCP server and skills for finding real-world app screens, flows, and website sections while designing and building UI.",
+  "author": {
+    "name": "Mobbin",
+    "email": "support@mobbin.com",
+    "url": "https://mobbin.com"
+  },
+  "homepage": "https://docs.mobbin.com/mcp/introduction",
+  "repository": "https://github.com/mobbin/skills",
+  "license": "MIT",
+  "keywords": ["mobbin", "design", "mcp", "ui", "ux"]
+}
