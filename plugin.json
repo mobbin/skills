@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mobbin",
+  "version": "0.1.0",
+  "description": "Ground design work in real-world UI from Mobbin: skills plus Mobbin's hosted MCP server for screens, flows, and website sections.",
+  "author": {
+    "name": "Mobbin",
+    "url": "https://mobbin.com"
+  },
+  "homepage": "https://docs.mobbin.com/mcp/introduction",
+  "repository": "https://github.com/mobbin/skills",
+  "license": "MIT",
+  "keywords": ["mobbin", "design-research", "ui-design", "ux-design", "mcp"]
+}

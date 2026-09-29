@@ -1,0 +1,20 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.json",
+  "name": "mobbin",
+  "description": "Official Mobbin plugins for AI coding agents.",
+  "owner": {
+    "name": "Mobbin",
+    "email": "support@mobbin.com",
+    "url": "https://mobbin.com"
+  },
+  "plugins": [
+    {
+      "name": "mobbin",
+      "source": "./",
+      "description": "Ground design work in real-world UI from Mobbin: skills plus Mobbin's hosted MCP server for screens, flows, and website sections.",
+      "homepage": "https://docs.mobbin.com/mcp/introduction",
+      "repository": "https://github.com/mobbin/skills",
+      "license": "MIT"
+    }
+  ]
+}
