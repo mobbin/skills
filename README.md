@@ -1,41 +1,75 @@
-# Skills
+# Mobbin Skills
 
-Agent skills for [Mobbin](https://mobbin.com) — the world's largest library of real app UI screenshots.
+A collection of skills for designing and building UI with [Mobbin](https://mobbin.com), the industry standard in UI &amp; UX design references for mobile apps, web apps, and websites
 
-## What's included
+## Installing
 
-- **Skills** in [`skills/`](skills/). They teach the agent when and how to use Mobbin.
-- **The Mobbin MCP server** at `https://api.mobbin.com/mcp`. The plugin installs it for you. On first use your agent opens a browser to sign in to Mobbin. You need a Pro, Team, or Enterprise plan.
+Use the native plugin where supported to install both the Mobbin skills and the Mobbin MCP server. Agents that only support the Agent Skills standard can install the skills separately.
 
-## Available Skills
+On first use your agent opens a browser to sign in to Mobbin. You need a Pro, Team, or Enterprise plan.
 
-### [search](skills/search/)
+### Codex
 
-How to search Mobbin well. Loaded before every `search_screens`, `search_flows` or `search_sections` call.
+```sh
+codex plugin marketplace add mobbin/skills
+codex plugin add mobbin@mobbin
+```
 
-**Covers:**
-- Choosing the tool: app screens and components, marketing-site sections, or steps in a flow
-- Choosing the mode: `deep` or `standard`
-- Writing an effective query and pulling more results
-- What to do when a search falls short
+### Claude Code
 
-### [redesign-screen](skills/redesign-screen/)
+```sh
+claude plugin marketplace add mobbin/skills
+claude plugin install mobbin@mobbin
+```
 
-Redesign a screen, section or component based on patterns from real apps. Share a screenshot, your code or a design file.
+Or from inside a Claude Code session:
 
-**Use when:**
-- You want to redesign, improve, restyle or rebuild part of your UI
-- You want a few directions to choose from, or specific problems fixed
+```
+/plugin marketplace add mobbin/skills
+/plugin install mobbin@mobbin
+```
 
-**What it does:**
-1. Asks about scope and what must not change
-2. Searches Mobbin for how real apps handle the same screen
-3. Updates the design inside your own design system
-4. Returns a before and after image and a short report that cites the references
+### npx skills
 
-### [plain-writing](skills/plain-writing/)
+Install using the [`npx skills`](https://skills.sh) CLI:
 
-Writing rules for the text a Mobbin skill hands to a person, such as a redesign report. Other Mobbin skills load it. It is not meant for writing outside them.
+```
+npx skills add https://github.com/mobbin/skills
+```
+
+This installs only the skills. Add the MCP server to your agent's MCP config yourself:
+
+```json
+{
+  "mcpServers": {
+    "mobbin": {
+      "url": "https://api.mobbin.com/mcp"
+    }
+  }
+}
+```
+
+## Skills
+
+Skills are contextual and auto-loaded based on your conversation. When a request matches a skill's triggers, the agent loads and applies the relevant skill.
+
+
+| Skill           | Useful for                                                                                                                                                                          |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| search          | Searching Mobbin well: choosing between screens, flows and sections, picking the mode, writing a query, pulling more results, and recovering when a search falls short              |
+| redesign-screen | Redesigning, improving, restyling or rebuilding a screen, section or component from a screenshot, code or a design file, grounded in how real apps on Mobbin handle the same screen |
+| plain-writing   | Writing rules for the text a Mobbin skill hands to a person, such as a redesign report. Loaded by other Mobbin skills, not meant for writing outside them                           |
+
+
+## MCP Servers
+
+This plugin includes the Mobbin [remote MCP server](https://docs.mobbin.com/mcp/introduction):
+
+
+| Server | Purpose                                                                                                                   |
+| ------ | ------------------------------------------------------------------------------------------------------------------------- |
+| mobbin | Search real app screens, flows and website sections on Mobbin with `search_screens`, `search_flows` and `search_sections` |
+
 
 ## License
 
