@@ -34,7 +34,7 @@ Or from inside a Claude Code session:
 Install using the [`npx skills`](https://skills.sh) CLI:
 
 ```
-npx skills add https://github.com/mobbin/skills
+npx skills add mobbin/skills
 ```
 
 This installs only the skills. Add the MCP server to your agent's MCP config yourself:
