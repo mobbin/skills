@@ -9,21 +9,33 @@ Agent skills for [Mobbin](https://mobbin.com) — the world's largest library of
 
 ## Available Skills
 
-### [mobbin-search](skills/mobbin-search/)
+### [search](skills/search/)
 
-Search Mobbin for real app screenshots and visually analyze them before answering design questions.
+How to search Mobbin well. Loaded before every `search_screens`, `search_flows` or `search_sections` call.
+
+**Covers:**
+- Choosing the tool: app screens and components, marketing-site sections, or steps in a flow
+- Choosing the mode: `deep` or `standard`
+- Writing an effective query and pulling more results
+- What to do when a search falls short
+
+### [redesign-screen](skills/redesign-screen/)
+
+Redesign a screen, section or component based on patterns from real apps. Share a screenshot, your code or a design file.
 
 **Use when:**
-- Exploring how top apps handle a specific screen or flow
-- Looking for design inspiration or references before building
-- Comparing UI patterns across apps
-- Any design question where real-world examples would help
+- You want to redesign, improve, restyle or rebuild part of your UI
+- You want a few directions to choose from, or specific problems fixed
 
 **What it does:**
-1. Searches Mobbin's library via MCP (images returned inline)
-2. Visually inspects each screenshot
-3. Responds directly or offers to build an HTML evidence board for deeper analysis
-4. Provides grounded observations with Mobbin links for further exploration
+1. Asks about scope and what must not change
+2. Searches Mobbin for how real apps handle the same screen
+3. Updates the design inside your own design system
+4. Returns a before and after image and a short report that cites the references
+
+### [plain-writing](skills/plain-writing/)
+
+Writing rules for the text a Mobbin skill hands to a person, such as a redesign report. Other Mobbin skills load it. It is not meant for writing outside them.
 
 ## Installation
 
