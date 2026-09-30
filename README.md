@@ -37,58 +37,6 @@ Redesign a screen, section or component based on patterns from real apps. Share 
 
 Writing rules for the text a Mobbin skill hands to a person, such as a redesign report. Other Mobbin skills load it. It is not meant for writing outside them.
 
-## Installation
-
-Where your agent supports plugins, install the plugin. It sets up the skills and the MCP server together.
-
-### Claude Code
-
-```
-/plugin marketplace add mobbin/skills
-/plugin install mobbin@mobbin
-```
-
-### VS Code / GitHub Copilot
-
-1. Turn on `chat.plugins.enabled` in VS Code settings.
-2. Run **Chat: Install Plugin From Source** from the Command Palette.
-3. Enter `https://github.com/mobbin/skills`.
-
-### Cursor
-
-Install **Mobbin** from the [Cursor Marketplace](https://cursor.com/marketplace).
-
-### Other agents: skills only
-
-```bash
-npx skills add mobbin/skills
-```
-
-This installs only the skills, so add the MCP server to your agent's MCP config yourself:
-
-```json
-{
-  "mcpServers": {
-    "mobbin": {
-      "url": "https://api.mobbin.com/mcp"
-    }
-  }
-}
-```
-
-<details>
-<summary>Manual installation</summary>
-
-```bash
-git clone https://github.com/mobbin/skills.git
-cp -r skills/skills/* ~/.claude/skills/
-```
-
-On Claude.ai, add the contents of a skill's `SKILL.md` to your project knowledge.
-</details>
-
-The MCP server on its own, for clients without plugin support, is documented in [`mobbin/mobbin-mcp-server`](https://github.com/mobbin/mobbin-mcp-server).
-
 ## License
 
 MIT
