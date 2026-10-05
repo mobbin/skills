@@ -9,6 +9,7 @@
     "url": "https://mobbin.com"
   },
   "homepage": "https://docs.mobbin.com/mcp/introduction",
+  "privacyPolicyUrl": "https://mobbin.com/privacy",
   "repository": "https://github.com/mobbin/skills",
   "license": "MIT",
   "keywords": ["mobbin", "design", "mcp", "ui", "ux"]
