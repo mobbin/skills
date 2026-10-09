@@ -1,9 +1,11 @@
 ---
 name: search
-description: How to search Mobbin well. Use before every call to search_screens, search_flows or search_sections, from a skill or a direct request. Covers the tool and mode, writing an effective query, pulling more results, and what to do when a search falls short.
+description: How to search Mobbin well. Use before every call to search_screens, search_flows or search_sections. Covers the tool and mode, writing an effective query, pulling more results, and what to do when a search falls short.
 ---
 
 # Searching Mobbin
+
+**Read best practices first.** If the Mobbin `best-practices` skill hasn't been read in this conversation, invoke it before searching, since it says when a search should run at all and when another skill should run it.
 
 A calling skill may set its own search rules, such as how many queries per problem or which mode to use. Where they differ from these, the calling skill's rule wins.
 
@@ -83,4 +85,4 @@ If it's still missing, carry on with the category search. Describe nothing about
 
 **Images don't open.** Previews come as `webp`, which not every host can open. Call again with `image_format` set to `jpg`. If they still don't open, cite nothing from that call, since a screen you couldn't see is not a reference.
 
-**The tool refuses the call**, such as when the workspace is out of AI credits. Don't retry it or change the query, since every call will be refused. Stop searching and say so. An error about the input, such as an invalid argument, is different: fix the input and call again.
+**The tool refuses the call.** Don't retry it or change the query, since every call will be refused. Stop searching and say so. An error about the input, such as an invalid argument, is different: fix the input and call again.

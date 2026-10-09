@@ -1,7 +1,7 @@
 {
   "name": "mobbin",
   "displayName": "Mobbin",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Mobbin MCP server and skills for finding real-world app screens, flows, and website sections while designing and building UI.",
   "author": {
     "name": "Mobbin",
