@@ -17,8 +17,8 @@
       "onboardingSkill": "./skills/best-practices/SKILL.md",
       "interface": {
         "displayName": "Mobbin",
-        "shortDescription": "Real-world UI references",
-        "longDescription": "Mobbin is a library of real app screens, user flows, and website sections from leading mobile apps, web apps, and websites. This plugin lets designers and developers look up how real products handle a screen or flow while they design and build UI, then use those references to redesign a screen, compare patterns, or pick a direction. Skills cover searching Mobbin well, redesigning a screen grounded in real examples, and getting started with Mobbin. Signing in with a Mobbin account is required. Results are limited to the apps and websites in the Mobbin library.",
+        "shortDescription": "Find designs that work",
+        "longDescription": "Where teams and agents find designs that work. Mobbin is a library of real app screens, user flows, and website sections from leading mobile apps, web apps, and websites. This plugin lets designers and developers look up how real products handle a screen or flow while they design and build UI, then use those references to redesign a screen, compare patterns, or pick a direction. Skills cover searching Mobbin well, redesigning a screen grounded in real examples, and getting started with Mobbin. Signing in with a Mobbin account is required. Results are limited to the apps and websites in the Mobbin library.",
         "developerName": "Mobbin",
         "category": "Design",
         "capabilities": ["Search app screens", "Search user flows", "Search website sections"],
