@@ -14,7 +14,6 @@
   "keywords": ["mobbin", "design", "mcp", "ui", "ux"],
   "extensions": {
     "com.openai": {
-      "onboardingSkill": "./skills/best-practices/SKILL.md",
       "interface": {
         "displayName": "Mobbin",
         "shortDescription": "Find designs that work",
