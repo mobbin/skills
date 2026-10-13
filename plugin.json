@@ -17,7 +17,7 @@
       "interface": {
         "displayName": "Mobbin",
         "shortDescription": "Real-world UI references",
-        "longDescription": "Where teams and agents find designs that work. Search real app screens, user flows, and website sections on Mobbin while you design and build UI.",
+        "longDescription": "Give your AI agent 600,000+ real app screens, and the skills to use them. Includes the Mobbin MCP and a skill that redesigns your screen from patterns real apps ship, in your own design system, with the references behind every change.",
         "developerName": "Mobbin",
         "category": "Creativity",
         "capabilities": ["Search app screens", "Search user flows", "Search website sections"],
