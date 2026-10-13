@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "mobbin",
-  "version": "1.3.0",
-  "description": "Mobbin MCP server and skills for finding real-world app screens, flows, and website sections while designing and building UI.",
+  "version": "1.4.0",
+  "description": "Give your AI agent 600,000+ real app screens, and the skills to use them. Includes the Mobbin MCP and a skill that redesigns your screen from patterns real apps ship, in your own design system, with the references behind every change.",
   "author": {
     "name": "Mobbin",
     "email": "support@mobbin.com",
@@ -11,5 +11,27 @@
   "homepage": "https://docs.mobbin.com/mcp/introduction",
   "repository": "https://github.com/mobbin/skills",
   "license": "MIT",
-  "keywords": ["mobbin", "design", "mcp", "ui", "ux"]
+  "keywords": ["mobbin", "design", "mcp", "ui", "ux"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Mobbin",
+        "shortDescription": "Real-world UI references",
+        "longDescription": "Give your AI agent 600,000+ real app screens, and the skills to use them. Includes the Mobbin MCP and a skill that redesigns your screen from patterns real apps ship, in your own design system, with the references behind every change.",
+        "developerName": "Mobbin",
+        "category": "Creativity",
+        "capabilities": ["Search app screens", "Search user flows", "Search website sections"],
+        "websiteURL": "https://mobbin.com",
+        "supportURL": "https://help.mobbin.com",
+        "privacyPolicyURL": "https://mobbin.com/privacy",
+        "termsOfServiceURL": "https://mobbin.com/terms",
+        "defaultPrompt": [
+          "Find onboarding flows from top fintech apps on Mobbin.",
+          "Redesign this settings screen using real apps on Mobbin as reference."
+        ],
+        "composerIcon": "./.claude-plugin/icon.png",
+        "logo": "./.claude-plugin/icon.png"
+      }
+    }
+  }
 }

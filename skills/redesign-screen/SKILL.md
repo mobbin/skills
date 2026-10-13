@@ -1,6 +1,6 @@
 ---
 name: redesign-screen
-description: Redesign any screen based on patterns from real apps. Explore variations or fix specific problems, and see the evidence behind each change. Share a screenshot, your code or a design file, and the skill finds how apps on Mobbin handle the same screen. You get a before and after image and a short report. The redesign stays in your own design system, and anything that already works is kept. Use whenever the user points at a screen, section, or component they have, or at a reference or Mobbin result, and asks to redesign, improve, restyle, or rebuild it, or to see a few directions for it.
+description: Redesign any screen from patterns real apps ship. Share a screenshot, your code or a design file, and the skill finds how apps on Mobbin handle the same screen. Explore a few directions or fix specific problems, and see the evidence behind each change. You get a before and after image and a short report. The redesign stays in your own design system, and anything that already works is kept. Use whenever the user points at a screen, section, or component they have, or at a reference or Mobbin result, and asks to redesign, improve, restyle, or rebuild it, or to see a few directions for it.
 ---
 
 # Redesign a screen from a reference

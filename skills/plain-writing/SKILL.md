@@ -1,6 +1,6 @@
 ---
 name: plain-writing
-description: Writing rules for the text a Mobbin skill hands to a person, such as a redesign report, scoping options, design feedback, a benchmark write-up or the answer to a why. Use only when a Mobbin skill writes prose for the user or asks for this skill by name; not for writing outside Mobbin skills. Writes for designers and the people they work with, in concrete interface terms, and removes the tells of AI-generated writing (em dashes, puffery, design buzzwords, rule-of-three, sign-offs) without changing a fact or adding one.
+description: Makes every report a Mobbin skill writes read like a person wrote it, in plain interface terms. Use only when a Mobbin skill writes prose for the user or asks for this skill by name; not for writing outside Mobbin skills. Removes the tells of AI-generated writing (em dashes, puffery, design buzzwords, rule-of-three, sign-offs) without changing a fact or adding one.
 ---
 
 # Plain writing: write it the way one designer would
