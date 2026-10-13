@@ -1,6 +1,6 @@
 ---
 name: search
-description: How to search Mobbin well. Use before every call to search_screens, search_flows or search_sections. Covers the tool and mode, writing an effective query, pulling more results, and what to do when a search falls short.
+description: Gets better results from every Mobbin search, so the references match what you're working on. Use before every call to search_screens, search_flows or search_sections. Covers the tool and mode, writing an effective query, pulling more results, and what to do when a search falls short.
 ---
 
 # Searching Mobbin

@@ -1,7 +1,7 @@
 {
   "name": "mobbin",
-  "version": "1.3.0",
-  "description": "Mobbin MCP server and skills for finding real-world app screens, flows, and website sections while designing and building UI.",
+  "version": "1.4.0",
+  "description": "Give your AI agent 600,000+ real app screens, and the skills to use them. Includes the Mobbin MCP and a skill that redesigns your screen from patterns real apps ship, in your own design system, with the references behind every change.",
   "mcpServers": "./mcp.json",
   "author": {
     "name": "Mobbin",
