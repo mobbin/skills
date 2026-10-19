@@ -10,8 +10,9 @@
   - as a PNG: open this file in a browser and capture the .board element at twice
     the pixel scale, after the panes have loaded. A capture tool that cannot set
     a device pixel ratio gets the same detail from --board-zoom: 2 below.
-  - as itself: send the file, with the pane images beside it. The app names link
-    to their Mobbin screens only here, not in the PNG.
+  - as itself: run scripts/embed-images.py on it first, which puts the pane
+    images inside the file, so it opens on its own and goes without them. The
+    app names link to their Mobbin screens only here, not in the PNG.
 
   "before" is one image path, or a list of { "image", "label" } when the input is
   several screenshots of one scrolling screen: each is its own card, in scroll

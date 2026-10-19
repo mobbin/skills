@@ -110,6 +110,8 @@ Copy the skill's `assets/variations.html` next to the captures, fill in its JSON
 
 Then read it back. Each variation differs visibly from BEFORE and from the others on the axis. Two that read the same at the board's scale are one side, and the weaker is dropped.
 
+Last, embed its images as [before-after-board.md](before-after-board.md) does, so the board file opens on its own.
+
 ## 7. Report
 
 Written as [report.md](report.md) writes the report, to a cap of 150 words. In order: the file links (`See variations: [HTML](path) · [PNG](path)`), **Variations**, **Unchanged**, the Degraded line when there is one, then the closing menu. Headings, file links and the closing menu follow report.md. The entries follow `plain-writing`'s shape for options, with **Variations** in place of **Changes**.
