@@ -26,8 +26,9 @@
         "privacyPolicyURL": "https://mobbin.com/privacy",
         "termsOfServiceURL": "https://mobbin.com/terms",
         "defaultPrompt": [
-          "Find onboarding flows from top fintech apps on Mobbin.",
-          "Redesign this settings screen using real apps on Mobbin as reference."
+          "Find home screen examples from banking apps",
+          "Show me how fitness apps design onboarding",
+          "Find pricing page examples from AI tools"
         ],
         "composerIcon": "./.claude-plugin/icon.png",
         "logo": "./.claude-plugin/icon.png"
