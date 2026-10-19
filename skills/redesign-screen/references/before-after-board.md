@@ -1,6 +1,6 @@
 # The before and after board
 
-Step 7 shows the user the render before they read about it. This file sets how the board is filled, captured, read back and delivered. The AFTER pane is the applied change captured, never redrawn from memory.
+Step 7 shows the user the render before they read about it. This file sets how the board is filled, captured, read back, made to stand alone and delivered. The AFTER pane is the applied change captured, never redrawn from memory.
 
 ## Fill the template
 
@@ -39,9 +39,21 @@ Read the composed image before writing a word about it.
 2. **Row by row.** Where a row's BEFORE and AFTER crops read the same at that scale, the move did not visibly answer its problem. Either shrink its report entry to what the crops show, or cut the move: the row goes, the problem's entry says it stayed and why, and the problem goes back in the Deferred record.
 3. **The top block.** Credit a visible difference there to the move that made it. A landing the eye finds because of one move is not written up under another.
 
+## Embed the images
+
+The board names its panes by path, so it only shows them while they sit beside it. A host that sends files one at a time, or a user who forwards the board, leaves them behind, and every pane and crop goes blank. Once the marks pass and the last capture is taken, put the images inside the file:
+
+```
+python3 <this skill's folder>/scripts/embed-images.py board.html
+```
+
+It swaps each image path in the JSON for the image itself and prints the count and the new size. A path that names no file stops it with the path named and the board unchanged: fix the path and run it again. Where Python cannot run, make the same change with what the host has: each path becomes `data:<the image's type>;base64,` followed by the file's bytes in base64, such as `data:image/png;base64,iVBOR…`.
+
+Embed last. The board then runs to hundreds of kilobytes, too large to read back or edit, so a rect that still needs fixing is fixed first. Never deliver a board before this step: on its own it shows nothing.
+
 ## Deliver
 
-Deliver by what the host can show, handing the files over as [report.md](report.md) says:
+Deliver by what the host can show, handing the files over as [report.md](report.md) says.
 
 | Host | Deliverable |
 | --- | --- |

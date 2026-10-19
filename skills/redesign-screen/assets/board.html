@@ -9,7 +9,8 @@
   - as a PNG: open this file in a browser and capture the .board element at twice
     the pixel scale, after the panes have loaded. A capture tool that cannot set
     a device pixel ratio gets the same detail from --board-zoom: 2 below.
-  - as itself: send the file, with the two pane images beside it
+  - as itself: run scripts/embed-images.py on it first, which puts the pane
+    images inside the file, so it opens on its own and goes without them
 
   Rects are percentages of the pane image they sit on, so they hold at any
   capture scale. Crops are cut from the same two pane images, so a move needs no

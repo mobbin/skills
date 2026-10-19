@@ -10,13 +10,17 @@
   - as a PNG: open this file in a browser and capture the .board element at twice
     the pixel scale, after the images have loaded. A capture tool that cannot set
     a device pixel ratio gets the same detail from --board-zoom: 2 below.
-  - as itself: send the file, with the downloaded screen images beside it. The
+  - as itself: run scripts/embed-images.py on it first, which puts the screen
+    images inside the file, so it opens on its own and goes without them. The
     app names link to their Mobbin screens only here, not in the PNG.
 
   "image" is the file downloaded from the screen's image_url, never the inline
   preview. "also" is left out unless the screen backs a later problem too.
   "label" is left out after a targeted run, so groups number 1, 2, 3; after an
   explore run it is the variation's letter.
+
+  Screens sit five to a row. "columns" is left out for phone screens; set it to 2
+  for web screens, so they stay readable.
 -->
 <html lang="en">
   <head>
@@ -192,7 +196,7 @@
 
       .cards {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(var(--columns, 5), 1fr);
         gap: var(--sp-4);
         align-items: start;
       }
@@ -318,6 +322,7 @@
       const groupTemplate = document.getElementById("group-template");
       const cardTemplate = document.getElementById("card-template");
       const groups = document.getElementById("groups");
+      if (data.columns) groups.style.setProperty("--columns", data.columns);
 
       data.groups.forEach((group, i) => {
         const section = groupTemplate.content.cloneNode(true);
