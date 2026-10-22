@@ -43,7 +43,8 @@ A run that lost a leg says so. After **Unchanged**, the report adds one plain li
 - `plain-writing` could not be invoked;
 - an image could not be opened for a screen you cite;
 - the search returned nothing usable;
-- the taken side holds fewer than two products;
+- the run stayed within a collection that fell short, as [collections.md](collections.md) sets out;
+- the taken side, or a variation's side, holds fewer than two products;
 - the before and after image could not be produced, on an image source, as [before-after-board.md](before-after-board.md) sets out.
 
 A degraded run that does not say so has misreported.
@@ -62,7 +63,9 @@ After the entries, at most one plain line for what the References lines do not c
 
 - parts of a move that no cited screen shows ("No reference shows the exact wording or placement.");
 - when every product behind the moves is from another domain, that they lend structure only;
-- a Preserve breach, or a removal the reader would not expect.
+- a Preserve breach, or a removal the reader would not expect;
+- when the run read a collection, where the references came from: that every change draws on it ("Every change draws on your "Checkout" collection."), or, when a search joined it, the changes whose References include screens from outside it;
+- a note on a saved screen that the render did not follow, and why, as [collections.md](collections.md) sets out.
 
 Nothing to say, no line.
 
@@ -88,9 +91,9 @@ Keep every cited screen's `mobbin_url` and `image_url`, with the decision it sho
 
 After **Unchanged** and any Degraded line, one line asking what the user wants next, then two to four bullets. Each bullet is one option in the user's terms, led by what it gives them, and filled from this run. A bullet with nothing from the run behind it is left out. The candidates, in this order when they apply:
 
-- **What this pass left out.** The Deferred record's top entries as a second pass ("a second pass on the promo code and the renewal line", "move the promo banner to checkout, as Calm does"), and the direction or scope not taken: the other side by its apps, the whole screen after a component pass, the other theme. Present whenever the Deferred record holds anything or a side was left.
+- **What this pass left out.** The Deferred record's top entries as a second pass ("a second pass on the promo code and the renewal line", "move the promo banner to checkout, as Calm does"), and the direction or scope not taken: the other side by its apps, the whole screen after a component pass, the other theme. After a run that stayed within a collection that fell short, a search of Mobbin for each problem it didn't cover. A decision the user's note on a saved screen liked, when no ticked problem needed it, as a next pass that names the note. Present whenever the Deferred record holds anything, a side was left, or a collection fell short.
 - **The reference board.** Every screen behind the render laid out as one image, with what each showed, so the user can see the evidence beside the result. Its form follows the source: a frame in the connected design tool when that tool can write one, a PNG otherwise.
-- **Search terms to keep going on Mobbin.** The queries this run made, reworded in the user's terms, plus the ones that would cover the Deferred record, so they can continue the research themselves.
+- **Search terms to keep going on Mobbin.** The queries this run made, reworded in the user's terms, plus the ones that would cover the Deferred record, so they can continue the research themselves. After a run that read only a collection, the queries that would cover what it lacked.
 - **Apply it.** After an image-only run, the same moves made in the code once they point at it, re-entering at step 2.
 
 `plain-writing` keeps the line and the bullets: they are the caller's structure, not a sign-off.

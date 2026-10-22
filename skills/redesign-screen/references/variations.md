@@ -9,7 +9,7 @@ The skill's Mode section sends a run here. The sections below replace the skill'
 - Ground rules, Inputs, and writing under `plain-writing`.
 - The Preserve list and how Apply holds it.
 - [taste.md](taste.md), and step 4's cuts for stock details and dropped content.
-- **Every variation is backed by precedent:** two or more products on its side, each a screen you looked at. A side one product backs is an example, not a direction, and is not shown.
+- **Every variation is backed by precedent:** two or more products on its side, each a screen you looked at. A side only one product shows is an example, not a direction, so it is not shown. The exception is when the user chose to stay within a collection that fell short (section 3).
 
 ## 1. Scope
 
@@ -44,22 +44,28 @@ Aim the search at the target's job, not at faults, so the results are broad enou
 
 Every query here runs `deep`, since each side has to show a decision. Everything else in the `search` skill holds. Look at every image and count products, not captures.
 
+**From a collection.** When the user points at their saves, read them as [collections.md](collections.md) sets out, in place of the queries above. The axis and sides below are found within it, and a search joins only where that file allows, with the queries aimed at the missing side.
+
 **Find one axis.** A screen makes many structural decisions (how plans are chosen, where the action sits, what leads the top). Sides per component would multiply into combinations no one can compare, or blend into a remix. So a run explores one axis: the decision the results split on most that also shapes most of the target.
 
 - On a paywall it is usually how the plan is chosen: a comparison table, stacked plan rows, or one card with a toggle. For a component target, it is that component's main decision.
+- When the screens differ most in how they're arranged (what comes first, how big each part is, where the action sits), make the arrangement the axis, even if their controls differ too. Each variation copies its side's whole arrangement, including where the action sits: if its products keep the action visible without scrolling, so does the variation.
 - When the request was a look word, the axis is the one [scope-and-preserve.md](scope-and-preserve.md) maps it to (colour placement, density or restraint). Sides are still what two or more products visibly do, never a mood.
 - **The axis line** names it for the report as the choice the user makes: "Pick how the plan is chosen." It never narrates what the screens or the variations did ("They differ in…", "The screens split…").
 
 **Record the sides.** A side is a control pattern and hierarchy on the axis, visible in two or more products. Record each like the skill's step 3: its apps, the decision they share, and per screen the `mobbin_url`, `image_url`, take and leave.
 
-- The side the baseline already follows is not a variation.
+- The side the baseline already follows is not a variation. Within a collection, a side whose one product makes the decisions the baseline already makes, on the axis and on the parts the screen shows, is the baseline's side too: it would build a look-alike.
 - Keep up to three sides, the most different from each other first. Fewer sides means fewer variations, never a padded one.
 - One side is shown alone, and the line under **Variations** says it was the only direction with precedent.
-- No side with precedent: say so in one line, build nothing, and offer a targeted run in the closing menu.
+- If no side has precedent, say so in one line, build nothing, and offer a targeted run in the closing menu. If the user chose to stay within a collection, follow the next bullet instead.
+- **Staying within a collection.** If the user chose to stay within a collection that fell short, also build each side that only one of its products shows, next to any side with precedent, as [collections.md](collections.md) says. Section 4 says how to build it. If the only side left is the one the baseline already follows, say so in one line, build nothing, and recommend a Mobbin search in the closing menu.
 
 ## 4. Build each variation from its side
 
-A variation is its side taken whole, as the skill's step 3 defines it. Nothing in it comes from another side. Beyond the axis, a component changes only when its side's products agree on it and it answers a break the walk found. Otherwise it stays as the baseline has it, since a difference between variations with no reason blurs what the user compares.
+A variation is its side taken whole, as the skill's step 3 defines it. Nothing in it comes from another side. Away from the axis, change a component only to fix a break the walk found, and only the way a product on its side fixes it. One product is enough, and the entry's Also: line says the change rests on one of its apps. Otherwise keep the component as the baseline has it, because a difference between variations with no reason makes them harder to compare. A side from one collection app is the exception, as the next paragraph says.
+
+The exception is a side that one collection product shows, built because the user chose to stay within the collection. That one product is the whole side, so the variation follows it across the screen. Every part that both the target and the product's screen have follows the product's decision, built as [taste.md](taste.md) sets out and within the Preserve list. Parts that only the product has are left out. Without this, the variation would differ from the baseline only on the axis, which is too little for the user to judge that app's approach. Parts that only the target has stay, and the product's treatment is fitted around them: if the product's button is narrow because it has no fields above it, the target's button stays as wide as the target's fields.
 
 Each variation has its own move table, as the skill's step 4 writes one, with two changes:
 
@@ -106,6 +112,7 @@ Copy the skill's `assets/variations.html` next to the captures, fill in its JSON
 
 - **Panes.** BEFORE, then one pane per variation, headed by its letter alone. Above each screen sit the entry's name, what-it-does line and References line (each app's `mobbin_url`), so a reader meets the direction before the picture.
 - **The rest of the JSON.** The title, the axis line, the theme and the meta line ("iOS paywall, 3 variations, 7 references").
+- **Collections**, only when the run read the user's collections, even if a search joined them: each one's name and `mobbin_url`, shown as chips on the title line. Saves described in words are one chip, named as the user put it ("Saved Duolingo screens") and linking to All saved. A run built from a search alone leaves it out.
 - **No marks or crops.** Unrelated redesigns share no numbered parts.
 
 Then read it back. Each variation differs visibly from BEFORE and from the others on the axis. Two that read the same at the board's scale are one side, and the weaker is dropped.
@@ -127,7 +134,7 @@ Written as [report.md](report.md) writes the report, to a cap of 150 words. In o
 
 Only the name is bold; the labels (References:, Downside:, Also:) are plain text. About 30 words per entry.
 
-After the last entry, two optional lines: an opinion on every variation, starting "My opinion is to", and "Not confirmed:" naming in a few words what the run did not confirm. No summary or comparison line after them. **Unchanged** lists what every variation kept.
+After the last entry, if the run read a collection, add one line on where the references came from, worded as in [report.md](report.md): "Every variation draws on your "Checkout" collection." or "Variation C also draws on screens from outside your collection." This line is required. Then two optional lines: an opinion on every variation, starting "My opinion is to", and "Not confirmed:" naming in a few words what the run did not confirm. No summary or comparison line after them. **Unchanged** lists what every variation kept.
 
 The closing menu, filled from this run:
 

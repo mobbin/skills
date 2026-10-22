@@ -24,7 +24,7 @@ Example (unsupported action): "Switch my workspace"
 > Mobbin works best on one screen, flow or section at a time, so let's break {what they asked for} into smaller steps. Being specific helps Mobbin find closer matches.
 >
 > Where you can start:
-> - **{What they get}.** "{A sample prompt with at least one constraint.}"
+> - **{What they get}.** "{A sample prompt naming one screen, flow or section.}"
 > - **{What they get}.** "{Another.}"
 > - **{What they get}.** "{Another.}"
 

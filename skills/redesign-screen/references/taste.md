@@ -7,10 +7,10 @@ A reference decides what a move does, never how it lands in this product. The de
 Every move, in how it is built. Authority runs in this order:
 
 1. The Preserve list and the design system.
-2. The cited screens, for what the move does and anything they visibly place.
-3. This file, for the rest.
+2. This file, for how every part is built: its size, rank, spacing, alignment and wording.
+3. The cited screens, for what each move does: the decision it makes and where its parts sit.
 
-It never overrides a cited screen and never starts a move; step 4 decides what gets a move. A part a cited screen shows is covered by its References line. A part no cited screen shows is your judgement, and the report grades it so, as Ground rules set out. These rules are how the call was made, not evidence, and are never named to the user.
+A cited screen informs a move but never decides how a part is built. When a screen and this file disagree, this file wins: a screen that makes a part big doesn't make it big here if this product's job ranks it lower. This file never starts a move; step 4 decides what gets a move. A part a cited screen shows is covered by its References line. A part no cited screen shows is your judgement, and the report grades it so, as Ground rules set out. These rules are how the call was made, not evidence, and are never named to the user.
 
 ## Dealbreakers
 
@@ -27,7 +27,7 @@ None says how anything looks; the look is the product's. They decide only relati
 
 1. **Change the least that answers the problem.** Rearrange before you restyle. A part the move does not need keeps its position, size and treatment. This limits what a move touches, never how fully the taken side is adopted.
 2. **A new element copies its nearest sibling**: the component, size, weight, colour role and spacing of the closest element doing the same kind of job. Nothing gets a treatment the screen does not already use.
-3. **One thing leads.** A new element sits at or below the rank of what it serves and never outranks the first step of the job. Giving one thing more weight gives nothing else more.
+3. **One thing leads.** A new or changed part sits at or below the rank of what it serves and never outranks the first step of the job, whatever rank it has on a cited screen. Giving one thing more weight gives nothing else more.
 4. **Things sit beside what they are about.** A label goes on the side of its subject the product already uses, usually above or leading. The gap inside a group is smaller than the gap between groups.
 5. **Use the lines already there.** A new element aligns to an existing edge and sits on an existing spacing step, adding no new alignment line.
 6. **The same thing looks the same.** Two elements doing one job in the target get one treatment.
