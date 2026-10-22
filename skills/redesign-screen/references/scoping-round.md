@@ -55,8 +55,8 @@ It comes before the scoping questions because they are written from whichever so
 
 **3. What else must survive?** The question tool cannot pre-tick, so what holds in every run is never an option. The question's first line states it in this product's terms: "The design system, the data and routes, and the installed dependencies hold. What else must survive?"
 
-- Multi-select from what the source showed: the copy word for word, the layout footprint, and one or two named elements a redesign might otherwise touch (the hero illustration, the comparison table).
-- No tick means only what holds in every run holds. Everything else may change where a move needs it, and nowhere else.
+- **Four options.** The first is always **Help me decide** ("I'll change only what makes the experience better"), so the user has an answer to pick instead of leaving the question blank. The rest come from what the source showed: the copy word for word, the layout footprint, and a named element a redesign might otherwise touch (the hero illustration, the comparison table).
+- **What the ticks mean.** Help me decide, or no tick, means only what holds in every run holds. Everything else may change where a move needs it, and nowhere else. Help me decide ticked beside other options keeps those too.
 - A user who wants a default relaxed types it in the free-text option. That triggers one follow-up before scoping continues, as [scope-and-preserve.md](scope-and-preserve.md) sets out.
 
 ## The proposed scope

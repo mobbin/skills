@@ -1,6 +1,6 @@
 ---
 name: redesign-screen
-description: Redesign any screen from patterns real apps ship. Share a screenshot, your code or a design file, and the skill finds how apps on Mobbin handle the same screen. Explore a few directions or fix specific problems, and see the evidence behind each change. You get a before and after image and a short report. The redesign stays in your own design system, and anything that already works is kept. Use whenever the user points at a screen, section, or component they have, or at a reference or Mobbin result, and asks to redesign, improve, restyle, or rebuild it, or to see a few directions for it.
+description: Redesign any screen from patterns real apps ship. Share a screenshot, your code or a design file, and the skill finds how apps on Mobbin handle the same screen. Explore a few directions or fix specific problems, and see the evidence behind each change. You get a before and after image and a short report. The redesign stays in your own design system, and anything that already works is kept. Use whenever the user points at a screen, section, or component they have, or at a reference, a Mobbin result, one or more Mobbin collections or the screens they saved, and asks to redesign, improve, restyle, or rebuild it, or to see a few directions for it.
 ---
 
 # Redesign a screen from a reference
@@ -11,7 +11,7 @@ Work as a design lead whose every decision is backed by a real product. Someone 
 
 1. **Scope the target.** Write the job, walk the path, and settle target, problems and what must survive, all before the first search.
 2. **Freeze the baseline.** Write down what must not change before changing anything.
-3. **Search and lock references.** Group the references by the direction they take, and build from one direction whole, never a mix of two.
+3. **Search and lock references**, or read the collection the user pointed at. Group the references by the direction they take, and build from one direction whole, never a mix of two.
 4. **Plan the moves.** One move per problem, each backed by screens that show its decision.
 5. **Apply** the moves in the source's own form.
 6. **Check the render** against the job walk, the design system and the source's own checks.
@@ -22,14 +22,15 @@ Explore mode builds one variation per direction instead of one render, and swaps
 
 ## Reference files
 
-Each is read at the step that names it, not before.
+Read each file in full at the step that names it, not before. Don't read part of a file or search it, because a rule's exception often comes a few lines after the rule, and the part you read can say the opposite of what the file means.
 
 | File | Read at |
 |------|---------|
 | [references/scoping-round.md](references/scoping-round.md) | step 1, before asking anything |
 | [references/scope-and-preserve.md](references/scope-and-preserve.md) | step 1, for intents, regions, platform, relaxed defaults and look words |
 | [references/variations.md](references/variations.md) | as soon as the mode is explore; it replaces steps 2 to 8 where it says so |
-| [references/taste.md](references/taste.md) | steps 4 to 6, for every part a cited screen does not show |
+| [references/collections.md](references/collections.md) | step 3, when the user named one or more collections or pointed at their saved items |
+| [references/taste.md](references/taste.md) | steps 4 to 6, for how every part is built |
 | [references/before-after-board.md](references/before-after-board.md) | step 7 |
 | [references/report.md](references/report.md) | step 8 |
 | [references/reference-board.md](references/reference-board.md) | only when the user asks for the reference board |
@@ -47,7 +48,7 @@ Every claim says how strong its evidence is: two or more products whose screens 
 
 What that rules out, in any text the user reads, from the first scoping option to the answer to a why:
 
-- **No Mobbin before step 3.** Until the search has run and its images are read, nothing is cited, so the scoping round uses only the source and the user's words.
+- **No Mobbin before step 3.** Until the search has run or the collection has been read, and its images are looked at, nothing is cited, so the scoping round uses only the source and the user's words.
 - **No class of products you did not look at.** No "most apps", "best-in-class", "industry standard" or "the way high-converting paywalls do": name the products, each a screen you looked at.
 - **No research, principle or heuristic from memory.** No "research shows", named law or name-dropped authority, since the skill has no corpus of studies.
 - **The job walk and taste.md are method, not memory.** A fault's reason is the step of the job it blocks, and [references/taste.md](references/taste.md) makes judgement calls without ever being named to the user.
@@ -61,6 +62,8 @@ What that rules out, in any text the user reads, from the first scoping option t
 The user brings a target in whatever form they have it: a codebase the working directory renders, an image, a design file, a live page, or whatever a connected tool exposes. That form is the **source**. Read it with whatever the environment offers, then treat every source alike: a region, elements, visible states, a palette, a type and spacing scale, and the design system those imply. The form decides only how the region is named, where the states come from, and the form the render goes back in.
 
 They may also bring their words (a complaint, a goal, a constraint, a look) and a reference of their own (a screenshot, a Mobbin link, a product name), which sets what the redesign aims at, with Mobbin screens still locked beside it so the result is not a copy of one product. Mobbin supplies the references through `search_screens`, `search_sections` and `search_flows`; when they are not connected, say so in one line and stop, since the skill does not run on memory.
+
+A **collection** the user names, links or points at ("my saved screens", "my checkout and paywall collections", "the screens I saved from Duolingo") is the evidence they chose. It is read with `list_collections` and `get_collection_contents` in place of a search, and the run stays inside it unless the user says otherwise, as [references/collections.md](references/collections.md) sets out.
 
 ## Mode
 
@@ -122,11 +125,13 @@ Fix the **problem list**: the ticked problems, each tied to the step it breaks a
 
 ## 3. Search and lock references
 
+**From a collection.** When the user points at their saves, read [references/collections.md](references/collections.md) first. It sets what is read and whether a search may join. Everything else in this step holds, with the collection's screens in place of search results.
+
 **Explore the problem space.** Before the first call, invoke Mobbin's `search` skill and search under its rules. Start with one query per problem, at most two before a second pull, and look at every image. A screen counts only when the decision that answers a problem is visible in it, not in its title. Count products, not captures: twenty captures of one app are one precedent, cited by the capture that shows the decision best. Prefer a matching job over a matching look, and never mix intents; a section screen does not inform a component.
 
 **Identify the directions.** Where the relevant screens disagree on structure (tabs against a chip row, a card that acts against a card that links), sort them into sides by the structural decision each shares.
 
-**Take a stand.** Pick one side for the whole target, not one per problem; a three-way split goes to the side that answers the most problems. Write down its apps, the decision they share, and one sentence on why it fits the job, specific enough that it could not also justify the other side. Take the side whole: its controls, its hierarchy and its scale, in the product's own components and type. The other side leaves the moves and earns one clause in the report. A break the references expose that the walk missed goes to the Deferred record with the screen that showed it.
+**Take a stand.** Pick one side for the whole target, not one per problem; a three-way split goes to the side that answers the most problems. Write down its apps, the decision they share, and one sentence on why it fits the job, specific enough that it could not also justify the other side. Take the side whole: its controls, its hierarchy and its scale, in the product's own components and type, and built as [references/taste.md](references/taste.md) sets out. The other side leaves the moves and earns one clause in the report. A break the references expose that the walk missed goes to the Deferred record with the screen that showed it.
 
 **Mark the references** on the taken side, each noted with app, `mobbin_url`, what it does that the baseline does not (the take), and what you will not carry (the leave: light or dark background, accent, typeface, copy, example data):
 

@@ -19,7 +19,13 @@
   order, never joined into one image.
 
   Panes sit in one row: BEFORE, then each variation. "columns" is left out for a
-  phone screen; set it to 2 for a wide web target, so the panes stay readable.
+  phone screen, which keeps four columns however few variations there are, so a
+  screen is the same size on every board; set it to 2 for a wide web target, so
+  the panes stay readable.
+
+  "collections" lists the user's collections the run read, each { "name", "url" }
+  with the collection's mobbin_url, as chips on the title line. Leave it out when
+  the run read no collection, such as a run built from a search alone.
 -->
 <html lang="en">
   <head>
@@ -157,6 +163,61 @@
         margin: var(--sp-2) 0 0;
         color: var(--fg2);
         font-size: var(--fs-14);
+      }
+      .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: var(--sp-8);
+      }
+      .heading {
+        flex: 1;
+        min-width: 0;
+      }
+      /* Collections the run read, on the title line. The width caps how many chips share a
+         line; later lines wrap under the chips, right-aligned. */
+      .collections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--sp-2);
+        max-width: 580px;
+        margin-top: 1px; /* Centres the first line on the title's 30px line. */
+        color: var(--fg3);
+        font-size: var(--fs-13);
+      }
+      .collections[hidden] {
+        display: none;
+      }
+      .collections-label {
+        white-space: nowrap;
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        max-width: 240px;
+        height: 28px;
+        padding: 0 10px 0 12px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--bg);
+        color: var(--fg1);
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .chip-name {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .chip svg {
+        flex: none;
+        width: 10px;
+        height: 10px;
+        color: var(--fg2);
       }
 
       .panes {
@@ -297,8 +358,13 @@
       <div class="docmeta">
         <span class="stamp">Mobbin · redesign-screen</span><span id="meta"></span>
       </div>
-      <h1 id="title"></h1>
-      <p class="axis" id="axis"></p>
+      <div class="head">
+        <div class="heading">
+          <h1 id="title"></h1>
+          <p class="axis" id="axis"></p>
+        </div>
+        <div class="collections" id="collections" hidden></div>
+      </div>
       <div class="panes" id="panes"></div>
     </div>
 
@@ -320,9 +386,10 @@
       document.getElementById("meta").textContent = data.meta ?? "";
       document.getElementById("title").textContent = data.title;
       document.getElementById("axis").textContent = data.axis ?? "";
+      fillCollections(document.getElementById("collections"), data.collections ?? []);
 
       const panes = document.getElementById("panes");
-      panes.style.setProperty("--columns", data.columns ?? data.variations.length + 1);
+      panes.style.setProperty("--columns", data.columns ?? 4);
       const before = Array.isArray(data.before) ? data.before : [{ image: data.before }];
       panes.append(buildPane({ image: before[0].image, images: before }, "Before"));
       data.variations.forEach((variation, i) => {
@@ -384,6 +451,33 @@
           stack.append(wrap);
         });
         first.replaceWith(stack);
+      }
+
+      /** One chip per collection, each a link to it on Mobbin; a long name is cut with an ellipsis. */
+      function fillCollections(el, collections) {
+        if (collections.length === 0) return;
+        el.hidden = false;
+        const label = document.createElement("span");
+        label.className = "collections-label";
+        label.textContent = "Collections referenced:";
+        el.append(label);
+        for (const collection of collections) {
+          const chip = document.createElement("a");
+          chip.className = "chip";
+          chip.href = collection.url;
+          chip.target = "_blank";
+          chip.rel = "noopener";
+          chip.title = collection.name;
+          const name = document.createElement("span");
+          name.className = "chip-name";
+          name.textContent = collection.name;
+          chip.append(name);
+          chip.insertAdjacentHTML(
+            "beforeend",
+            '<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 7.5 7.5 2.5M3.5 2.5h4v4" /></svg>'
+          );
+          el.append(chip);
+        }
       }
 
       /** "References: App · App", each app a link to its Mobbin screen, as in the report. */

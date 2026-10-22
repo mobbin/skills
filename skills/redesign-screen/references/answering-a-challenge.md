@@ -7,7 +7,7 @@ A why arrives in a later turn, after the report: "why the list and not the table
 The reply follows Ground rules and the report's voice.
 
 1. **Open with the reason**, in one sentence.
-2. **Give the facts behind it**, each once, from your notes: the side taken and its apps, the side not taken and why, and the problem the move answered with its roll call, every app named and linked as in the report.
+2. **Give the facts behind it**, each once, from your notes: the side taken and its apps, the side not taken and why, and the problem the move answered with its roll call, every app named and linked as in the report. Before you give a rule as a reason, read its whole file again, from the copy of the skill this run loaded, because the rule's exception may come a few lines later.
 3. **Say which reasons still hold.** A reason that rested on a constraint the user has since changed is named as voided in one clause. The same reply decides whether the direction survives without it, and never offers that as a choice.
 
 The side not taken keeps its one clause: no re-argument, no comparison frame, no third variant to settle what the run already settled.
