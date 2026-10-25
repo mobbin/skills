@@ -3,7 +3,7 @@
   "displayName": "Mobbin",
   "version": "1.5.0",
   "description": "Give your AI agent 600,000+ real app screens, and the skills to use them. Includes the Mobbin MCP and a skill that redesigns your screen from patterns real apps ship, in your own design system, with the references behind every change.",
-  "logo": "assets/logo.png",
+  "logo": "assets/logo.svg",
   "suggestedPrompts": [
     "Find home screen examples from banking apps and save them to a collection",
     "Compare how AI tools design their pricing sections",
