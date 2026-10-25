@@ -29,7 +29,7 @@ Or from inside a Claude Code session:
 /plugin install mobbin@mobbin
 ```
 
-### Antigravity
+### Antigravity CLI
 
 ```sh
 agy plugin install https://github.com/mobbin/skills
