@@ -29,6 +29,12 @@ Or from inside a Claude Code session:
 /plugin install mobbin@mobbin
 ```
 
+### Antigravity
+
+```sh
+agy plugin install https://github.com/mobbin/skills
+```
+
 ### npx skills
 
 Install using the [`npx skills`](https://skills.sh) CLI:
