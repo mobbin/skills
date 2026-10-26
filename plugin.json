@@ -30,8 +30,8 @@
           "Compare how AI tools design their pricing sections",
           "Review my paywall screen against the ones I saved in collections"
         ],
-        "composerIcon": "./assets/logo.png",
-        "logo": "./assets/logo.png"
+        "composerIcon": "./assets/logo.svg",
+        "logo": "./assets/logo.svg"
       }
     }
   }
