@@ -67,10 +67,6 @@ Skills are contextual and auto-loaded based on your conversation. When a request
 | redesign-screen | Redesigning, improving, restyling or rebuilding a screen, section or component from a screenshot, code or a design file, grounded in how real apps on Mobbin handle the same screen or in the screens you saved to Mobbin collections |
 | plain-writing   | Writing rules for the text a Mobbin skill hands to a person, such as a redesign report. Loaded by other Mobbin skills, not meant for writing outside them                                                                             |
 
-## Support
+---
 
-Visit the [Help Center](https://help.mobbin.com) or email [support@mobbin.com](mailto:support@mobbin.com).
-
-## Privacy
-
-Read our [Privacy Policy](https://mobbin.com/privacy) and [Terms of Service](https://mobbin.com/terms).
+[Terms of Service](https://mobbin.com/terms) · [Privacy Policy](https://mobbin.com/privacy) · [Help Center](https://help.mobbin.com)
