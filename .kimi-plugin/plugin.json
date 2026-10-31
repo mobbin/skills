@@ -1,0 +1,27 @@
+{
+  "name": "mobbin",
+  "version": "1.5.0",
+  "description": "Give your AI agent 600,000+ real app screens, and the skills to use them. Includes the Mobbin MCP and a skill that redesigns your screen from patterns real apps ship, in your own design system, with the references behind every change.",
+  "author": {
+    "name": "Mobbin",
+    "email": "support@mobbin.com",
+    "url": "https://mobbin.com"
+  },
+  "homepage": "https://docs.mobbin.com/mcp/introduction",
+  "repository": "https://github.com/mobbin/skills",
+  "license": "MIT",
+  "keywords": ["mobbin", "design", "mcp", "ui", "ux"],
+  "interface": {
+    "displayName": "Mobbin",
+    "shortDescription": "Real-world UI references",
+    "longDescription": "Give your AI agent 600,000+ real app screens, and the skills to use them. Includes the Mobbin MCP and a skill that redesigns your screen from patterns real apps ship, in your own design system, with the references behind every change.",
+    "developerName": "Mobbin",
+    "websiteURL": "https://mobbin.com"
+  },
+  "skills": "./skills/",
+  "mcpServers": {
+    "mobbin": {
+      "url": "https://api.mobbin.com/mcp"
+    }
+  }
+}
