@@ -35,6 +35,14 @@ Or from inside a Claude Code session:
 agy plugin install https://github.com/mobbin/skills
 ```
 
+### Gemini CLI
+
+```sh
+gemini extensions install https://github.com/mobbin/skills
+```
+
+Then run `/mcp auth mobbin` inside Gemini CLI to sign in.
+
 ### npx skills
 
 Install using the [`npx skills`](https://skills.sh) CLI:
