@@ -43,6 +43,14 @@ agy plugin install https://github.com/mobbin/skills
 
 Run `/reload` afterwards to apply the plugin.
 
+### Gemini CLI
+
+```sh
+gemini extensions install https://github.com/mobbin/skills
+```
+
+Then run `/mcp auth mobbin` inside Gemini CLI to sign in.
+
 ### npx skills
 
 Install using the [`npx skills`](https://skills.sh) CLI:
@@ -74,3 +82,7 @@ Skills are contextual and auto-loaded based on your conversation. When a request
 | search          | Searching Mobbin well: choosing between screens, flows and sections, picking the mode, writing a query, pulling more results, and recovering when a search falls short                                                                |
 | redesign-screen | Redesigning, improving, restyling or rebuilding a screen, section or component from a screenshot, code or a design file, grounded in how real apps on Mobbin handle the same screen or in the screens you saved to Mobbin collections |
 | plain-writing   | Writing rules for the text a Mobbin skill hands to a person, such as a redesign report. Loaded by other Mobbin skills, not meant for writing outside them                                                                             |
+
+---
+
+[Terms of Service](https://mobbin.com/terms) · [Privacy Policy](https://mobbin.com/privacy) · [Help Center](https://help.mobbin.com)
