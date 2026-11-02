@@ -9,8 +9,8 @@
     "email": "support@mobbin.com",
     "url": "https://mobbin.com"
   },
-  "homepage": "https://docs.mobbin.com/mcp/introduction",
+  "homepage": "https://mobbin.com/mcp",
   "repository": "https://github.com/mobbin/skills",
   "license": "MIT",
-  "keywords": ["mobbin", "design", "mcp", "ui", "ux"]
+  "keywords": ["mobbin", "design", "inspiration", "mcp", "ui", "ux"]
 }
