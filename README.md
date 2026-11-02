@@ -35,6 +35,14 @@ Or from inside a Claude Code session:
 agy plugin install https://github.com/mobbin/skills
 ```
 
+### Kimi Code CLI
+
+```
+/plugins install https://github.com/mobbin/skills
+```
+
+Run `/reload` afterwards to apply the plugin.
+
 ### Gemini CLI
 
 ```sh
