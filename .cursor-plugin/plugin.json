@@ -12,5 +12,30 @@
   "homepage": "https://mobbin.com/mcp",
   "repository": "https://github.com/mobbin/skills",
   "license": "MIT",
-  "keywords": ["mobbin", "design", "inspiration", "mcp", "ui", "ux"]
+  "keywords": [
+    "mobbin",
+    "design",
+    "ui",
+    "ux",
+    "inspiration",
+    "design-inspiration",
+    "ui-design",
+    "ux-design",
+    "product-design",
+    "design-reference",
+    "app-screens",
+    "screenshots",
+    "user-flows",
+    "ui-patterns",
+    "mobile",
+    "ios",
+    "web-design",
+    "websites",
+    "redesign",
+    "design-system",
+    "frontend",
+    "ux-research",
+    "competitive-analysis",
+    "mcp"
+  ]
 }
