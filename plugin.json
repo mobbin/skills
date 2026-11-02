@@ -8,10 +8,10 @@
     "email": "support@mobbin.com",
     "url": "https://mobbin.com"
   },
-  "homepage": "https://docs.mobbin.com/mcp/introduction",
+  "homepage": "https://mobbin.com/mcp",
   "repository": "https://github.com/mobbin/skills",
   "license": "MIT",
-  "keywords": ["mobbin", "design", "mcp", "ui", "ux"],
+  "keywords": ["mobbin", "design", "inspiration", "mcp", "ui", "ux"],
   "extensions": {
     "com.openai": {
       "interface": {
@@ -20,7 +20,7 @@
         "longDescription": "Give your AI agent 600,000+ real app screens, and the skills to use them. Includes the Mobbin MCP and a skill that redesigns your screen from patterns real apps ship, in your own design system, with the references behind every change.",
         "developerName": "Mobbin",
         "category": "Creativity",
-        "capabilities": ["Search app screens", "Search user flows", "Search website sections"],
+        "capabilities": ["Interactive", "Read", "Write"],
         "websiteURL": "https://mobbin.com",
         "supportURL": "https://help.mobbin.com",
         "privacyPolicyURL": "https://mobbin.com/privacy",
