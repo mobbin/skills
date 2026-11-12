@@ -1,0 +1,41 @@
+{
+  "name": "mobbin",
+  "displayName": "Mobbin",
+  "version": "1.5.0",
+  "description": "Search 600,000+ real product screens, flows, and UI patterns in Mobbin and use skills to redesign your UI",
+  "shortDescription": "Product screens, UI patterns, and skills",
+  "homepage": "https://mobbin.com/mcp",
+  "repository": "https://github.com/mobbin/skills",
+  "logo": "assets/logo.svg",
+  "keywords": [
+    "mobbin",
+    "design",
+    "ui",
+    "ux",
+    "inspiration",
+    "design-inspiration",
+    "ui-design",
+    "ux-design",
+    "product-design",
+    "design-reference",
+    "app-screens",
+    "screenshots",
+    "user-flows",
+    "ui-patterns",
+    "mobile",
+    "ios",
+    "web-design",
+    "websites",
+    "redesign",
+    "design-system",
+    "frontend",
+    "ux-research",
+    "competitive-analysis",
+    "mcp"
+  ],
+  "mcpServers": {
+    "mobbin": {
+      "url": "https://api.mobbin.com/mcp"
+    }
+  }
+}
