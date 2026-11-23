@@ -8,18 +8,6 @@
     "url": "https://github.com/mobbin/skills",
     "source": "github"
   },
-  "icons": [
-    {
-      "src": "https://mobbin.com/mobbin-marketing-pages/images/apple-touch-icon.png",
-      "mimeType": "image/png",
-      "sizes": ["180x180"]
-    },
-    {
-      "src": "https://mobbin.com/mobbin-marketing-pages/images/favicon.svg",
-      "mimeType": "image/svg+xml",
-      "sizes": ["any"]
-    }
-  ],
   "remotes": [
     {
       "type": "streamable-http",
